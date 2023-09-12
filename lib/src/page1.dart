@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Page1 extends StatelessWidget {
+  const Page1({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.tealAccent,
       appBar: AppBar(
         backgroundColor: Colors.deepPurpleAccent,
-        title: Text('Practica 2'),
+        title: const Text('Practica 2'),
         centerTitle: true,
       ),
       body: Center(
@@ -15,19 +17,19 @@ class Page1 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           ElevatedButton(
-            child: Text('Pagina 2'),
             style: ElevatedButton.styleFrom(
-                primary: Colors.amber, onPrimary: Colors.white),
+                foregroundColor: Colors.white, backgroundColor: Colors.amber),
             onPressed: () {
               Navigator.pushNamed(context, '/Page2');
             },
+            child: const Text('Pagina 2'),
           ),
           ElevatedButton(
-            child: Text('Pagina 2'),
-            style: ElevatedButton.styleFrom(primary: Colors.red, onPrimary: Colors.white),
+            style: ElevatedButton.styleFrom(foregroundColor: Colors.white, backgroundColor: Colors.red),
             onPressed: (){
               Navigator.pushNamed(context, '/Page3');
-            },)
+            },
+            child: const Text('Pagina 3'),)
         ],
       )),
     );

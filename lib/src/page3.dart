@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Page3 extends StatelessWidget {
+  const Page3({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +12,7 @@ class Page3 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           ElevatedButton(
-            child: Text('Atras'),
+            child: const Text('Atras'),
             onPressed: () {
               Navigator.of(context).pop();
             })
